@@ -16,24 +16,47 @@ struct ListProductsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List {
-                    ForEach(vm.products) { product in
-                        NavigationLink(destination: EditProductView(product: product)) {
-                            
-                            VStack(alignment: .leading, spacing: 10) {
-                                HStack {
-                                    Text(product.name)
-                                    Spacer()
-                                    Text(String(format: "%.2f", product.price))
-                                }
-                                Text(product.detail)
-                            }
+                
+                if vm.products.count == 0 {
+                    Text("Empty List")
+                } else {
+                    List {
+                        ForEach(vm.products) { product in
+                            NavigationLink(destination: EditProductView(product: product)) {
                                 
+                                VStack(alignment: .leading, spacing: 10) {
+                                    HStack {
+                                        Text(product.name)
+                                        Spacer()
+                                        Text(String(format: "%.2f", product.price))
+                                    }
+                                    Text(product.detail)
+                                }
+                                    
+                            }
+                        }
+                        .onDelete(perform: vm.delete)
+                    }
+                    .listStyle(.inset)
+                }
+            
+                Spacer()
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: AddProductView()) {
+                        VStack {
+                            Circle()
+                                .fill(.white)
+                                .frame(width: 75, height: 75)
+                                .shadow(radius: 10)
+                                .overlay(
+                                    Image(systemName: "plus")
+                                        .font(.largeTitle)
+                            )
                         }
                     }
-                    .onDelete(perform: vm.delete)
+                    .padding(.horizontal)
                 }
-                .listStyle(.inset)
             }
             .onAppear(){
                 vm.load()
