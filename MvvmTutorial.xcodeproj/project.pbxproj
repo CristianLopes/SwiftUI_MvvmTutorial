@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4942E7CB2A6A66FB007742FC /* AddProductViewV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942E7CA2A6A66FB007742FC /* AddProductViewV2.swift */; };
 		49B64F322A5E3731002CDAE3 /* MvvmTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B64F312A5E3731002CDAE3 /* MvvmTutorialApp.swift */; };
 		49B64F362A5E3732002CDAE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B64F352A5E3732002CDAE3 /* Assets.xcassets */; };
 		49B64F392A5E3732002CDAE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B64F382A5E3732002CDAE3 /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4942E7CA2A6A66FB007742FC /* AddProductViewV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewV2.swift; sourceTree = "<group>"; };
 		49B64F2E2A5E3731002CDAE3 /* MvvmTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B64F312A5E3731002CDAE3 /* MvvmTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmTutorialApp.swift; sourceTree = "<group>"; };
 		49B64F352A5E3732002CDAE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4942E7C92A6A66CD007742FC /* AddProduct */ = {
+			isa = PBXGroup;
+			children = (
+				49B64F462A5E45D0002CDAE3 /* AddProductView.swift */,
+				4942E7CA2A6A66FB007742FC /* AddProductViewV2.swift */,
+			);
+			path = AddProduct;
+			sourceTree = "<group>";
+		};
 		49B64F252A5E3731002CDAE3 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +115,7 @@
 		49B64F452A5E45B6002CDAE3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				49B64F462A5E45D0002CDAE3 /* AddProductView.swift */,
+				4942E7C92A6A66CD007742FC /* AddProduct */,
 				49B64F502A5E4C3D002CDAE3 /* ListProductsView.swift */,
 				49B64F542A5E4E25002CDAE3 /* EditProductView.swift */,
 			);
@@ -207,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4942E7CB2A6A66FB007742FC /* AddProductViewV2.swift in Sources */,
 				49B64F4A2A5E4608002CDAE3 /* AddProductViewModel.swift in Sources */,
 				49B64F442A5E3D14002CDAE3 /* CoreDataContainer.xcdatamodeld in Sources */,
 				49B64F322A5E3731002CDAE3 /* MvvmTutorialApp.swift in Sources */,
